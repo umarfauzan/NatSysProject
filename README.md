@@ -4,7 +4,7 @@ Group Name: __Fill your team name__.
 
 Team Mates:
 1. __Fill name__ and __matric no__
-2. __Fill name__ and __matric no__
+2. __Umar bin Fauzan 2225575__
 3. __Fill name__ and __matric no__
 
 ## Rules
@@ -22,8 +22,8 @@ Team Mates:
 
 ***Questions:***
 
-1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __Fill answer here__.
-2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__.
+1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __https://github.com/umarfauzan/NatSysProject?tab=readme-ov-file__.
+2. How many files and folders are in this repository. ***(1 mark)*** __1 folder and 7 files__.
 
 
 ## Exploring github codespaces
@@ -55,9 +55,9 @@ Team Mates:
 
 ***Questions:***
 
-1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** __Fill answer here__.
-2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __Fill answer here__.
-3. Why must we commit and sync our current work on source control? ***(1 mark)*** __Fill answer here__.
+1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** __Ubuntu Linux__.
+2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __RAM: 2GB / 4GB, Disk: 32GB / 64GB, VCPU: 2 cores / 4 cores__.
+3. Why must we commit and sync our current work on source control? ***(1 mark)*** __To make sure the latest version of changes is being saved__.
 
 ## Exploring the Terminal
 
@@ -74,7 +74,7 @@ codespace
 
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
-1. Run the command **pwd** . ***(1 mark)*** __Fill answer here__.
+1. Run the command **pwd** . ***(1 mark)*** __/workspaces/NatSysProject__.
 2. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
 3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
 4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
