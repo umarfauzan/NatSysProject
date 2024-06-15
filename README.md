@@ -3,9 +3,9 @@
 Group Name: __Fill your team name__. 
 
 Team Mates:
-1. __Fill name__ and __matric no__
+1. __Syed Muhammad Afiq Idid bin Syed Azli Idid 2218417__
 2. __Umar bin Fauzan 2225575__
-3. __Fill name__ and __matric no__
+3. __Hanif Uthman bin Zulkipli 2215001__
 
 ## Rules
 1. You are allowed to have **3 group** members.
@@ -325,27 +325,31 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
     ```
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** 
     ```
-
+    91 Megabytes
     ```
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** 
     ```
-
+    Linux version: 6.5.0-1021-azure
+    Hardware architecture: x86_64
     ```
 14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 
     ```
-
+    ls :used to list directory contents. By including **-asl** which is:
+    -a: list all files, including hidden ones
+    -s: display size of each blocks
+    -l: includes detailed information about each file
     ```
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 
     ```
-
+    32 Kilobyte
     ```
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 
     ```
-
+    3.08 GHz
     ```
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 
     ```
-
+    node with PID 559. CPU usage: 1.3%
     ```
 
 ## Running your own container instance.
@@ -406,8 +410,14 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** 
+    ```
+    No, because containers are designed to be isolated from the host and other containers, providing a consistent environment for applications.
+    ```
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** 
+    ```
+    Yes, but it might slow down the performance of the machine.
+    ```
 
 ## Running your own container with persistent storage
 
@@ -426,14 +436,30 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** 
+```
+-rw-rw-rw- 1 root root 0 Jun 15 12:09 file1.txt
+-rw-rw-rw- 1 root root 0 Jun 15 12:09 file2.txt
+
+By default, files created within a docker container are owned by the 'root' user and 'root' group unless specified otherwise.
+
+The default permissions are:
+'rw-': read and write for the owner.
+'r--': read-only for the group
+'r--': read-only for others
+```
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
+```
 
 ```
-*** __Fill answer here__.***
+-rw-rw-rw- 1 codespace codespace 0 Jun 15 12:09 file1.txt
+-rw-rw-rw- 1 codespace codespace 0 Jun 15 12:09 file2.txt
+
+Yes, you can change the permissions to these files to other users.
+```
 
 ## You are on your own, create your own static webpage
 
@@ -459,9 +485,20 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
-2. What port is the apache web server running. ***(1 mark)***
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** 
+    ```
+    drwxrwxrwx+ 2 1000 1000 4096 Jun 15 12:32 /usr/local/apache2/htdocs
+
+    It indicates that everyone have the permission to read, write and execute.
+    ```
+2. What port is the apache web server running. 
+    ```
+    Port 8080
+    ```
 3. What port is open for http protocol on the host machine? ***(1 mark)***
+    ```
+    Port 80
+    ```
 
 ## Create SUB Networks
 
@@ -480,11 +517,37 @@ docker run -itd --net rednet --name c2 busybox sh
 ```
 ***Questions:***
 
-1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** __Fill answer here__.
+1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** 
+```
+Busybox is a software that provides several Unix utilities in a single executable file.
+
+'--name' command is used to change the name of a docker machine.
+```
 2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)***
+```
+NETWORK ID     NAME      DRIVER    SCOPE
+095ca8154644   bluenet   bridge    local
+5234d99d2d38   bridge    bridge    local
+ad1d1a76c128   host      host      local
+d2d0553109a4   none      null      local
+d0cbebf1187c   rednet    bridge    local
+```
 3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)***
+```
+Gateway for bluenet: 172.18.0.1
+Gateway for rednet: 172.19.0.1
+```
 4. What is the network address for the running container c1 and c2.
+```
+Network address for c1: 172.18.0.2
+Network address for c2: 172.19.0.2
+```
 5. Using the command ```docker exec c1 ping c2```, which basically issue a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)***
+```
+ping: bad address 'c2'
+
+No, c1 isn't able to ping c2.
+```
 
 ## Bridging two SUB Networks
 1. Let's try this again by creating a network to bridge the two containers in the two subnetworks
@@ -493,6 +556,17 @@ docker network create bridgenet
 docker network connect bridgenet c1
 docker network connect bridgenet c2
 docker exec c1 ping c2
+```
+
+```
+PING c2 (172.20.0.3): 56 data bytes
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.146 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.074 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.067 ms
+64 bytes from 172.20.0.3: seq=3 ttl=64 time=0.085 ms
+64 bytes from 172.20.0.3: seq=4 ttl=64 time=0.091 ms
+64 bytes from 172.20.0.3: seq=5 ttl=64 time=0.076 ms
+64 bytes from 172.20.0.3: seq=6 ttl=64 time=0.059 ms
 ```
 
 ## What to submit
