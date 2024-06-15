@@ -74,23 +74,279 @@ codespace
 
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
-1. Run the command **pwd** . ***(1 mark)*** __/workspaces/NatSysProject__.
-2. Run the command **cat /etc/passwd** . ***(1 mark)*** __Fill answer here__.
-3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
-4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
-5. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
-6. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
-7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
-8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
-9. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
-10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+1. Run the command **pwd** . ***(1 mark)*** <br>
+    ```
+    /workspaces/NatSysProject
+    ```
+
+2. Run the command **cat /etc/passwd** . ***(1 mark)*** 
+    ```
+    root:x:0:0:root:/root:/bin/bash
+    daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+    bin:x:2:2:bin:/bin:/usr/sbin/nologin
+    sys:x:3:3:sys:/dev:/usr/sbin/nologin
+    sync:x:4:65534:sync:/bin:/bin/sync
+    games:x:5:60:games:/usr/games:/usr/sbin/nologin
+    man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+    lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+    mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+    news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+    uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+    proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+    www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+    backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+    list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+    irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+    gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+    nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+    _apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+    systemd-timesync:x:101:101:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+    systemd-network:x:102:103:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+    systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+    messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
+    codespace:x:1000:1000::/home/codespace:/bin/bash
+    sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+    ```
+
+3. Run the command **df** . ***(1 mark)*** 
+    ```
+    Filesystem     1K-blocks     Used Available Use% Mounted on
+    overlay         32847680 10382292  20771288  34% /
+    tmpfs              65536        0     65536   0% /dev
+    shm                65536        0     65536   0% /dev/shm
+    /dev/root       30298176 24405676   5876116  81% /vscode
+    /dev/sda1       46127956      104  43752276   1% /tmp
+    /dev/loop3      32847680 10382292  20771288  34% /workspaces
+    ```
+4. Run the command **du** . ***(1 mark)*** 
+    ```
+    4       ./.git/branches
+    8       ./.git/objects/1b
+    8       ./.git/objects/83
+    8       ./.git/objects/47
+    8       ./.git/objects/71
+    12      ./.git/objects/62
+    8       ./.git/objects/58
+    12      ./.git/objects/73
+    8       ./.git/objects/a6
+    8       ./.git/objects/04
+    8       ./.git/objects/fd
+    12      ./.git/objects/e5
+    8       ./.git/objects/41
+    8       ./.git/objects/7b
+    8       ./.git/objects/24
+    8       ./.git/objects/c6
+    12      ./.git/objects/3d
+    8       ./.git/objects/0b
+    12      ./.git/objects/72
+    12      ./.git/objects/d2
+    8       ./.git/objects/86
+    12      ./.git/objects/1c
+    8       ./.git/objects/eb
+    8       ./.git/objects/ab
+    12      ./.git/objects/ff
+    12      ./.git/objects/af
+    8       ./.git/objects/74
+    8       ./.git/objects/96
+    12      ./.git/objects/70
+    8       ./.git/objects/d8
+    8       ./.git/objects/91
+    8       ./.git/objects/c3
+    8       ./.git/objects/3a
+    12      ./.git/objects/17
+    12      ./.git/objects/2e
+    8       ./.git/objects/0d
+    8       ./.git/objects/52
+    8       ./.git/objects/fc
+    8       ./.git/objects/e7
+    16      ./.git/objects/fb
+    8       ./.git/objects/fa
+    8       ./.git/objects/4b
+    12      ./.git/objects/6e
+    12      ./.git/objects/b5
+    8       ./.git/objects/49
+    8       ./.git/objects/60
+    8       ./.git/objects/fe
+    8       ./.git/objects/20
+    8       ./.git/objects/f6
+    8       ./.git/objects/3f
+    8       ./.git/objects/a3
+    8       ./.git/objects/cd
+    8       ./.git/objects/f2
+    12      ./.git/objects/e0
+    8       ./.git/objects/b2
+    8       ./.git/objects/93
+    8       ./.git/objects/81
+    8       ./.git/objects/e9
+    8       ./.git/objects/cb
+    12      ./.git/objects/64
+    8       ./.git/objects/b9
+    8       ./.git/objects/e2
+    8       ./.git/objects/b6
+    8       ./.git/objects/4f
+    8       ./.git/objects/4a
+    4       ./.git/objects/info
+    12      ./.git/objects/14
+    1824    ./.git/objects/pack
+    12      ./.git/objects/44
+    2440    ./.git/objects
+    8       ./.git/logs/refs/heads
+    8       ./.git/logs/refs/remotes/origin
+    12      ./.git/logs/refs/remotes
+    24      ./.git/logs/refs
+    32      ./.git/logs
+    68      ./.git/hooks
+    4       ./.git/lfs/tmp
+    8       ./.git/lfs
+    4       ./.git/refs/tags
+    8       ./.git/refs/heads
+    8       ./.git/refs/remotes/origin
+    12      ./.git/refs/remotes
+    28      ./.git/refs
+    8       ./.git/info
+    2620    ./.git
+    1972    ./images
+    4620    .
+    ```
+
+5. Run the command **ls** . ***(1 mark)*** <br>
+    ```
+    README.md  images.
+    ```
+6. Run the command **ls -asl** . ***(1 mark)*** 
+    ```
+    total 44
+    4 drwxrwxrwx+ 4 codespace root  4096 Jun 14 12:50 .
+    4 drwxr-xrwx+ 5 codespace root  4096 Jun 14 12:01 ..
+    4 drwxrwxrwx+ 9 codespace root  4096 Jun 14 12:13 .git
+    28 -rw-rw-rw-  1 codespace root 24847 Jun 14 13:15 README.md
+    4 drwxrwxrwx+ 2 codespace root  4096 Jun 14 12:01 images
+    ```
+7. Run the command **free -h** . ***(1 mark)*** 
+    ```
+                  total        used        free      shared  buff/cache available
+    Mem:          7.7Gi       1.4Gi       204Mi        64Mi       6.2Gi    6.0Gi
+    Swap:            0B          0B          0B
+    ```
+
+8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** 
+    ```
+    processor       : 0
+    vendor_id       : AuthenticAMD
+    cpu family      : 25
+    model           : 1
+    model name      : AMD EPYC 7763 64-Core Processor
+    stepping        : 1
+    microcode       : 0xffffffff
+    cpu MHz         : 2450.524
+    cache size      : 512 KB
+    physical id     : 0
+    siblings        : 2
+    core id         : 0
+    cpu cores       : 1
+    apicid          : 0
+    initial apicid  : 0
+    fpu             : yes
+    fpu_exception   : yes
+    cpuid level     : 13
+    wp              : yes
+    flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+    bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+    bogomips        : 4890.84
+    TLB size        : 2560 4K pages
+    clflush size    : 64
+    cache_alignment : 64
+    address sizes   : 48 bits physical, 48 bits virtual
+    power management:
+
+    processor       : 1
+    vendor_id       : AuthenticAMD
+    cpu family      : 25
+    model           : 1
+    model name      : AMD EPYC 7763 64-Core Processor
+    stepping        : 1
+    microcode       : 0xffffffff
+    cpu MHz         : 2456.124
+    cache size      : 512 KB
+    physical id     : 0
+    siblings        : 2
+    core id         : 0
+    cpu cores       : 1
+    apicid          : 1
+    initial apicid  : 1
+    fpu             : yes
+    fpu_exception   : yes
+    cpuid level     : 13
+    wp              : yes
+    flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+    bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+    bogomips        : 4890.84
+    TLB size        : 2560 4K pages
+    clflush size    : 64
+    cache_alignment : 64
+    address sizes   : 48 bits physical, 48 bits virtual
+    power management:
+    ```
+
+9. Run the command **top** and type **q** to quit. ***(1 mark)*** <br>
+    ````
+    Tasks:  17 total,   1 running,  16 sleeping,   0 stopped,   0 zombie
+    %Cpu(s):  5.3 us,  4.9 sy,  0.0 ni, 89.5 id,  0.3 wa,  0.0 hi,  0.0 si,  0.0 st
+    MiB Mem :   7929.6 total,    264.0 free,   1363.4 used,   6302.1 buff/cache
+    MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6186.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                                                                       
+    559 codespa+  20   0 1317352  92156  45184 S   1.3   1.1   0:05.34 node                                                                                                                                          
+    579 codespa+  20   0   21.5g 338088  49920 S   0.7   4.2   0:37.20 node                                                                                                                                          
+   1027 codespa+ 20   0 1107804  65752  42240 S   0.3   0.8   0:01.20 node                                                                                                                                          
+      1 codespa+  20   0    1136    640    640 S   0.0   0.0   0:00.04 docker-init                                                                                                                                   
+      7 codespa+  20   0    7236   1792   1792 S   0.0   0.0   0:00.01 sleep                                                                                                                                         
+     22 root      20   0   12196   3352   2432 S   0.0   0.0   0:00.00 sshd                                                                                                                                          
+    362 codespa+  20   0    2616   1408   1408 S   0.0   0.0   0:00.00 sh                                                                                                                                            
+    388 root      20   0    2616   1664   1664 S   0.0   0.0   0:00.00 sh                                                                                                                                            
+    550 codespa+  20   0    2624   1536   1536 S   0.0   0.0   0:00.01 sh                                                                                                                                            
+    593 codespa+  20   0 1240564  57132  41216 S   0.0   0.7   0:00.28 node                                                                                                                                          
+    1054 codespa+ 20   0   16628  11392   3328 S   0.0   0.1   0:00.19 bash                                                                                                                                          
+    1524 codespa+ 20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                                                                                                                                            
+    1565 root     20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                                                                                                                                            
+    2070 root     20   0 1983432  87064  53504 S   0.0   1.1   0:00.22 dockerd                                                                                                                                       
+    2078 root     20   0 1724844  42744  30720 S   0.0   0.5   0:00.30 containerd                                                                                                                                    
+    2480 codespa+ 20   0 1011768  77888  40704 S   0.0   1.0   0:07.40 node                                                                                                                                          
+    10146 codespa+ 20   0   10888   3712   3200 R   0.0   0.0   0:00.00 top                                                                                                                                           
+                                                                                                                               
+10. Run the command **uname -a**. ***(1 mark)*** 
+    ```
+    Linux codespaces-01f6a4 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+    ```
+
+11. What is the available free memory in the system. ***(1 mark)***
+    ```
+    204 Megabytes
+    ```
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** 
+    ```
+
+    ```
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** 
+    ```
+
+    ```
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 
+    ```
+
+    ```
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 
+    ```
+
+    ```
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 
+    ```
+
+    ```
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 
+    ```
+
+    ```
 
 ## Running your own container instance.
 
