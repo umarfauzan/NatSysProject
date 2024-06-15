@@ -1,6 +1,6 @@
 # Net&Sys Assignment: Running Containers for Application Development
 
-Group Name: __Fill your team name__. 
+Group Name: __SPG Group__. 
 
 Team Mates:
 1. __Syed Muhammad Afiq Idid bin Syed Azli Idid 2218417__
